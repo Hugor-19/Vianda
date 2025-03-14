@@ -100,7 +100,7 @@
                 android:id="@+id/btnMinus"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:background=""
+                android:background="@drawable/circle_button"
                 android:text="-"
                 android:textColor="@color/black"
                 android:textSize="18sp"/>
@@ -118,7 +118,7 @@
                 android:id="@+id/btnPlus"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:background=""
+                android:background="@drawable/circle_button"
                 android:text="+"
                 android:textColor="@color/black"
                 android:textSize="18sp"/>
@@ -133,5 +133,6 @@
                 android:textColor="@color/white"
                 android:textStyle="bold" />
         </LinearLayout>
+
     </LinearLayout>
 </ScrollView>
