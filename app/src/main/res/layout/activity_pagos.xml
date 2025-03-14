@@ -33,8 +33,6 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:layout_marginBottom="40dp"
-            android:layout_marginTop="40dp"
             android:paddingVertical="10dp">
 
             <ImageView
@@ -78,7 +76,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="$21.500"
-            android:textSize="24sp"
+            android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:layout_marginTop="5dp"/>
@@ -95,7 +93,7 @@
                 android:id="@+id/btnMinus"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:background="@drawable/quitar_btn"
+                android:background="@drawable/circle_button"
                 android:text="-"
                 android:textColor="@color/black"
                 android:textSize="18sp"/>
@@ -105,16 +103,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textColor="@color/black"
-                android:textStyle="bold"
                 android:paddingHorizontal="20dp"/>
 
             <Button
                 android:id="@+id/btnPlus"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:background="@drawable/agregar_btn"
+                android:background="@drawable/circle_button"
                 android:text="+"
                 android:textColor="@color/black"
                 android:textSize="18sp"/>
@@ -142,7 +139,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="10dp"
-            android:layout_marginVertical="40dp"
             android:background="@color/gray_light"
             android:layout_marginTop="10dp">
 
@@ -194,10 +190,9 @@
         <!-- Botón para generar pedido -->
         <Button
             android:id="@+id/btnGenerateOrder"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
-            android:layout_marginLeft="30dp"
             android:backgroundTint="#2ECC71"
             android:text="Generar pedido"
             android:textColor="@color/white"
