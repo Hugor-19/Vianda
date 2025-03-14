@@ -93,11 +93,10 @@
                 android:id="@+id/btnMinus"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:background="@drawable/circle_button"
+                android:background=""
                 android:text="-"
                 android:textColor="@color/black"
                 android:textSize="18sp"/>
-
             <TextView
                 android:id="@+id/tvQuantity"
                 android:layout_width="wrap_content"
@@ -111,7 +110,7 @@
                 android:id="@+id/btnPlus"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:background="@drawable/circle_button"
+                android:background=""
                 android:text="+"
                 android:textColor="@color/black"
                 android:textSize="18sp"/>
