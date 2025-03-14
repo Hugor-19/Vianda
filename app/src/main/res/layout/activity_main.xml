@@ -9,18 +9,18 @@
 
     <!-- Imagen de Bienvenida -->
     <ImageView
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:src="@drawable/fondo"
+        android:layout_width="277dp"
+        android:layout_height="257dp"
+        android:layout_marginBottom="20dp"
         android:scaleType="fitCenter"
-        android:layout_marginBottom="20dp"/>
+        android:src="@drawable/fondo" />
 
     <!-- Título -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bienvenidos"
-        android:textSize="24sp"
+        android:text="@string/bienvenida"
+        android:textSize="28sp"
         android:textStyle="bold"
         android:textColor="@color/black"
         android:gravity="center"
@@ -28,33 +28,34 @@
 
     <!-- Subtítulo -->
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="Comprar tu comida también debe\nser una experiencia."
-        android:textSize="14sp"
-        android:textColor="@color/gray_text"
+        android:text="@string/frase_bienvenida"
+        android:textSize="16sp"
+        android:textColor="@color/black"
         android:gravity="center"
         android:layout_marginBottom="30dp"/>
 
     <!-- Botón Crear Cuenta -->
     <Button
         android:id="@+id/btnRegister"
-        android:layout_width="match_parent"
+        android:layout_width="280dp"
         android:layout_height="50dp"
         android:layout_marginBottom="15dp"
-        android:backgroundTint="#2ECC71"
-        android:text="Crear Cuenta"
+        android:background="@drawable/button_rounded"
+        android:text="@string/btn_registrarse"
         android:textColor="@color/gray_light"
         android:textStyle="bold" />
 
     <!-- Botón Iniciar Sesión -->
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="match_parent"
+        android:layout_width="280dp"
         android:layout_height="50dp"
+        android:paddingVertical="5dp"
         android:layout_marginBottom="20dp"
         android:backgroundTint="#2ECC71"
-        android:text="Iniciar Sesión"
+        android:text="@string/btn_login"
         android:textColor="@color/white"
         android:textStyle="bold" />
 
@@ -63,9 +64,9 @@
         android:id="@+id/tvSkip"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="end"
         android:text="Omitir"
-        android:textSize="14sp"
         android:textColor="@color/green_primary"
-        android:textStyle="bold"
-        android:gravity="end"/>
+        android:textSize="14sp"
+        android:textStyle="bold" />
 </LinearLayout>

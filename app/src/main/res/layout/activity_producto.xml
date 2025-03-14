@@ -30,21 +30,25 @@
         </RelativeLayout>
 
         <!-- Imagen del producto -->
-        <ImageView
-            android:id="@+id/productImage"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="fitCenter"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/inicio"/>
 
         <!-- Nombre del producto -->
+
+        <ImageView
+            android:id="@+id/productImage"
+            android:layout_width="400dp"
+            android:layout_margin="10dp"
+            android:layout_height="220dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/inicio"
+            android:scaleType="fitCenter" />
+
         <TextView
             android:id="@+id/productName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hamburguesa especial"
             android:textSize="22sp"
+            android:layout_marginVertical="10dp"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:layout_marginTop="10dp"/>
@@ -66,6 +70,7 @@
             android:layout_height="wrap_content"
             android:text="$17.000"
             android:textSize="18sp"
+            android:layout_marginVertical="10dp"
             android:textStyle="bold"
             android:textColor="@color/green_primary"
             android:layout_marginTop="10dp"/>
@@ -94,13 +99,14 @@
             android:orientation="horizontal"
             android:gravity="center_vertical"
             android:paddingVertical="10dp"
+            android:layout_marginVertical="180dp"
             android:background="@color/white">
 
             <Button
                 android:id="@+id/btnMinus"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:background="@drawable/circle_button"
+                android:background="@drawable/agregar_btn"
                 android:text="-"
                 android:textColor="@color/black"
                 android:textSize="18sp"/>
@@ -118,14 +124,14 @@
                 android:id="@+id/btnPlus"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:background="@drawable/circle_button"
+                android:background="@drawable/quitar_btn"
                 android:text="+"
                 android:textColor="@color/black"
                 android:textSize="18sp"/>
 
             <Button
                 android:id="@+id/btnAddToCart"
-                android:layout_width="match_parent"
+                android:layout_width="250dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="20dp"
                 android:backgroundTint="#2ECC71"
