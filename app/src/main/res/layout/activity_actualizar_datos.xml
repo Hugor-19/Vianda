@@ -1,36 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:padding="20dp">
 
     <!-- Botón Atrás -->
-    <ImageView
-        android:id="@+id/btnBack"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:src="@drawable/ic_back"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintMarginTop="20dp" />
 
     <!-- Título -->
-    <TextView
-        android:id="@+id/tvTitulo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Actualiza tus datos"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnBack"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:gravity="center"
-        android:layout_marginTop="10dp"/>
 
     <!-- Subtítulo -->
 
@@ -44,13 +23,41 @@
 
     <!-- Botón Actualizar -->
 
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toStartOf="@+id/tvTitulo"
+        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintMarginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
     <TextView
+        android:id="@+id/tvTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="80dp"
+        android:gravity="center"
+        android:text="Actualiza tus datos"
+        android:textColor="@color/black"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
         android:text="Ingresa los datos a modificar"
-        android:textColor="@color/green_primary"
-        android:textSize="14sp"
+        android:textColor="@color/green_dark"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvTitulo" />
@@ -59,7 +66,7 @@
         android:id="@+id/etNombre"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="100dp"
         android:background="@drawable/rounded_border"
         android:hint="Nombre"
         android:padding="10dp"
@@ -75,7 +82,7 @@
         android:id="@+id/etCorreo"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/rounded_border"
         android:enabled="false"
         android:hint="Correo electrónico"
@@ -84,7 +91,7 @@
         android:textColor="@color/gray_text"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/etNombre" />
 
@@ -92,7 +99,7 @@
         android:id="@+id/etTelefono"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/rounded_border"
         android:hint="Teléfono"
         android:inputType="phone"
@@ -109,7 +116,7 @@
         android:id="@+id/etContrasena"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/rounded_border"
         android:hint="Contraseña"
         android:inputType="textPassword"
@@ -118,22 +125,26 @@
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/etTelefono" />
 
     <Button
         android:id="@+id/btnActualizar"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="76dp"
-        android:backgroundTint="#2ECC71"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="332dp"
+        android:backgroundTint="@color/green_dark"
         android:text="Actualizar"
         android:textColor="@color/white"
+        android:textSize="16sp"
         android:textStyle="bold"
+        app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.622"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etContrasena" />
+        app:layout_constraintTop_toBottomOf="@id/etContrasena"
+
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

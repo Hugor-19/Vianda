@@ -1,6 +1,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
     android:padding="16dp">
 
@@ -10,35 +11,44 @@
         android:orientation="vertical">
 
         <!-- Botón de retroceso -->
-        <ImageView
-            android:id="@+id/btnBack"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/ic_back"
-            android:layout_marginBottom="10dp"/>
-
-        <!-- Título -->
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Detalle del pedido"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:layout_gravity="center"/>
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp"
+            >
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="60dp"
+                android:src="@drawable/ic_back" />
 
-        <!-- Producto en el carrito -->
+            <!-- Título -->
+
+            <!-- Producto en el carrito -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Detalle del pedido"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:gravity="center_vertical"
+            android:orientation="horizontal"
             android:paddingVertical="10dp">
 
             <ImageView
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:src="@drawable/hamburguesas"/>
+                android:src="@drawable/hamburguesas" />
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -51,151 +61,189 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Hamburguesa especial"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1 Jugo de mora en agua"
-                    android:textSize="14sp"
-                    android:textColor="@color/gray_text"/>
+                    android:textColor="@color/gray_text"
+                    android:textSize="14sp" />
             </LinearLayout>
 
             <ImageView
                 android:id="@+id/btnDelete"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_delete"/>
+                android:src="@drawable/ic_delete" />
         </LinearLayout>
 
         <!-- Precio -->
-        <TextView
-            android:id="@+id/tvTotalPrice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="$21.500"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:layout_marginTop="5dp"/>
 
-        <!-- Controles de cantidad -->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:paddingVertical="10dp">
 
-            <Button
-                android:id="@+id/btnMinus"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="@drawable/circle_button"
-                android:text="-"
-                android:textColor="@color/black"
-                android:textSize="18sp"/>
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          >
 
-            <TextView
-                android:id="@+id/tvQuantity"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1"
-                android:textSize="18sp"
-                android:textColor="@color/black"
-                android:paddingHorizontal="20dp"/>
+          <TextView
+              android:id="@+id/tvTotalPrice"
+              android:layout_width="0dp"
+              android:layout_weight="2"
+              android:layout_height="wrap_content"
+              android:text="$21.500"
+              android:textColor="@color/black"
+              android:textSize="22sp"
+              android:textStyle="bold" />
 
-            <Button
-                android:id="@+id/btnPlus"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="@drawable/circle_button"
-                android:text="+"
-                android:textColor="@color/black"
-                android:textSize="18sp"/>
-        </LinearLayout>
+          <!-- Controles de cantidad -->
+          <LinearLayout
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="2"
+              android:gravity="center"
+              android:orientation="horizontal"
+              android:paddingVertical="10dp">
+
+              <ImageView
+                  android:id="@+id/btnMinus"
+                  android:layout_width="40dp"
+                  android:layout_height="40dp"
+                  android:background="@drawable/quitar_btn" />
+
+              <TextView
+                  android:id="@+id/tvQuantity"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:paddingHorizontal="20dp"
+                  android:text="1"
+                  android:textColor="@color/black"
+                  android:textSize="24sp"
+                  android:textStyle="bold"/>
+
+              <ImageView
+                  android:id="@+id/btnPlus"
+                  android:layout_width="40dp"
+                  android:layout_height="40dp"
+                  android:background="@drawable/agregar_btn"
+                  />
+
+          </LinearLayout>
+
+      </LinearLayout>
 
         <!-- Pago en efectivo -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
             android:text="Pago en efectivo"
-            android:textSize="16sp"
-            android:textStyle="bold"
             android:textColor="@color/black"
-            android:layout_marginTop="15dp"/>
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:background="@color/gray_light"
-            android:layout_marginTop="5dp"/>
+            android:layout_marginTop="5dp"
+            android:background="@color/gray_light" />
 
         <!-- Detalle del pago -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="10dp"
+            android:layout_marginTop="10dp"
             android:background="@color/gray_light"
-            android:layout_marginTop="10dp">
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Detalle del pago"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Subtotal"
-                android:textSize="14sp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/tvSubtotal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="end"
                 android:text="$21.500"
-                android:textSize="14sp"
-                android:textStyle="bold"
                 android:textColor="@color/black"
-                android:gravity="end"/>
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Servicio"
-                android:textSize="14sp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/tvServiceFee"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="end"
                 android:text="$2.000"
-                android:textSize="14sp"
-                android:textStyle="bold"
                 android:textColor="@color/black"
-                android:gravity="end"/>
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Total a pagar"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:textColor="@color/green_primary"
-                android:gravity="end"
-                android:layout_marginTop="5dp"/>
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Total a pagar"
+                    android:textColor="@color/green_dark"
+                    android:textSize="16sp"
+                    android:gravity="start"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="$ 23.500"
+                    android:textColor="@color/green_dark"
+                    android:textSize="16sp"
+                    android:textAlignment="textEnd"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
         </LinearLayout>
 
         <!-- Botón para generar pedido -->
         <Button
             android:id="@+id/btnGenerateOrder"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="50dp"
-            android:layout_marginTop="20dp"
-            android:backgroundTint="#2ECC71"
+            android:layout_marginTop="300dp"
+            android:layout_marginStart="25dp"
+            android:backgroundTint="@color/green_dark"
             android:text="Generar pedido"
             android:textColor="@color/white"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:cornerRadius="10dp" />
     </LinearLayout>
 </ScrollView>

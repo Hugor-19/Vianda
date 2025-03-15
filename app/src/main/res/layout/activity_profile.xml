@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="#F6F6F6"
     tools:context=".ProfileActivity">
 
     <!-- Botón Atrás -->
@@ -23,46 +23,31 @@
 
     <!-- Botón "Cerrar Sesión" -->
 
-    <ImageButton
-        android:id="@+id/btnBack"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="24dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:contentDescription="Volver"
-        android:src="@drawable/ic_back"
-        app:layout_constraintMarginStart="16dp"
-        app:layout_constraintMarginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/tvProfileTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="172dp"
         android:text="Perfil"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintMarginStart="16dp"
         app:layout_constraintMarginTop="20dp"
-        app:layout_constraintStart_toEndOf="@id/btnBack"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imgProfile"
         android:layout_width="99dp"
         android:layout_height="87dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/circle_background"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="148dp"
         android:scaleType="centerCrop"
         android:src="@drawable/perfil"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintMarginTop="20dp"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvProfileTitle" />
 
     <TextView
@@ -94,37 +79,42 @@
 
     <Button
         android:id="@+id/btnManageAccount"
-        android:layout_width="match_parent"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:background="@drawable/button_background"
-        android:drawableStart="@drawable/ic_account"
+        android:backgroundTint="#FDFCFC"
+        android:padding="12dp"
         android:text="Gestionar cuenta"
         android:textColor="@color/black"
+        android:textSize="20sp"
+        app:cornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintMarginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvUserEmail" />
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
+        android:background="#FDFDFD"
         android:orientation="vertical"
         android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnManageAccount">
+        app:layout_constraintTop_toBottomOf="@+id/btnManageAccount"
+        app:layout_constraintVertical_bias="0.0">
 
         <!-- Feedback -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableStart="@drawable/ic_feedback"
+            android:backgroundTint="#F4F3F3"
             android:drawablePadding="8dp"
-            android:padding="12dp"
+            android:padding="20dp"
             android:text="⭐ Feedback"
             android:textColor="@color/black"
             android:textSize="16sp" />
@@ -133,9 +123,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableStart="@drawable/ic_star"
             android:drawablePadding="8dp"
-            android:padding="12dp"
+            android:padding="20dp"
             android:text="🌟 Calificanos"
             android:textColor="@color/black"
             android:textSize="16sp" />
@@ -144,9 +133,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableStart="@drawable/ic_version"
             android:drawablePadding="8dp"
-            android:padding="12dp"
+            android:padding="20dp"
             android:text="📌 Versión 1.0"
             android:textColor="@color/black"
             android:textSize="16sp" />
@@ -154,15 +142,28 @@
 
     <Button
         android:id="@+id/btnLogout"
-        android:layout_width="match_parent"
+        android:layout_width="340dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
-        android:backgroundTint="#2ECC71"
+        android:backgroundTint="@color/green_dark"
         android:text="Cerrar sesión"
         android:textColor="@color/white"
+        app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintMarginBottom="20dp"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/imgProfile"
+        app:layout_constraintEnd_toStartOf="@+id/tvProfileTitle"
+        app:layout_constraintHorizontal_bias="0.19"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.347"
+        app:srcCompat="@drawable/ic_back" />
 </androidx.constraintlayout.widget.ConstraintLayout>
