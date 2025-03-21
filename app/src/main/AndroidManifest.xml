@@ -13,7 +13,11 @@
         android:theme="@style/Theme.Vianda"
         tools:targetApi="31">
         <activity
-            android:name=".login"
+            android:name=".LoginActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Vianda" />
+        <activity
+            android:name=".ProfileActivity"
             android:exported="false"
             android:theme="@style/Theme.Vianda" />
         <activity
