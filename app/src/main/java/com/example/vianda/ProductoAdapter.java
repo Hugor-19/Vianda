@@ -51,11 +51,9 @@ public class ProductoAdapter extends RecyclerView.Adapter<ProductoAdapter.Produc
     public int getItemCount() {
         return listaProductos.size();
     }
-
     public static class ProductoViewHolder extends RecyclerView.ViewHolder {
         TextView txtNombre, txtPrecio;
         ImageView imgProducto;
-
         public ProductoViewHolder(View itemView) {
             super(itemView);
             txtNombre = itemView.findViewById(R.id.txtNombre);

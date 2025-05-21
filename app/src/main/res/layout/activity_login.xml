@@ -40,7 +40,7 @@
 
     <!-- Campo Email -->
     <EditText
-        android:id="@+id/etEmailLogin"
+        android:id="@+id/etEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Email address"
@@ -51,7 +51,7 @@
 
     <!-- Campo Contraseña -->
     <EditText
-        android:id="@+id/etPasswordLogin"
+        android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Password"

@@ -43,7 +43,7 @@ public class MenuActivity extends AppCompatActivity {
         productos = new ArrayList<>();
 
         // URL de tu API
-        String url = "http://172.22.66.52:8082/menus/all"; // Cambia la URL de tu API
+        String url = "http://192.168.2.14:8082/menus/all";
 
         // Hacer la solicitud para obtener los productos
         RequestQueue requestQueue = Volley.newRequestQueue(this);
@@ -65,7 +65,7 @@ public class MenuActivity extends AppCompatActivity {
                                 productos.add(new Producto(nombre, imagen, descripcion, precio));
                             }
 
-                            // Configurar el adaptador con los datos obtenidos
+
                             if (!productos.isEmpty()) {
                                 adapter = new ProductoAdapter(MenuActivity.this, productos);
                                 recyclerView.setAdapter(adapter);
